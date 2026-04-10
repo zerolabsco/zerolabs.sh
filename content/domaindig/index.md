@@ -16,3 +16,4 @@ DomainDig is an iOS utility for quick DNS lookups and SSL certificate checks.
 
 - [App Store](https://apps.apple.com/us/app/domaindig/id6760368004)
 - [Source Code](https://git.sr.ht/~ccleberg/DomainDig)
+- [Privacy Policy](/domaindig/privacy-policy/)

@@ -16,3 +16,4 @@ DayByDay is an iOS app for learning days, months, and seasons through simple rep
 
 - [App Store](https://apps.apple.com/us/app/daybyday-learn/id6760321939)
 - [Source Code](https://git.sr.ht/~ccleberg/DayByDay)
+- [Privacy Policy](/daybyday/privacy-policy/)
