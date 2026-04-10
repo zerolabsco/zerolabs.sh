@@ -6,9 +6,7 @@ section_label = "Project / DayByDay"
 meta = "Policy / Privacy / Current"
 +++
 
-# Privacy Policy
-
-**DayByDay**  
+*DayByDay*
 Last updated: March 9, 2026
 
 ## Overview
@@ -45,4 +43,4 @@ here with a revised date.
 
 ## Contact
 
-If you have any questions about this policy, contact: privacy@cleberg.net
+If you have any questions about this policy, contact: [privacy@cleberg.net](mailto:privacy@cleberg.net)
