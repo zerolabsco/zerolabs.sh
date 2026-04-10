@@ -6,7 +6,7 @@ section_label = "Project / DayByDay"
 meta = "Policy / Privacy / Current"
 +++
 
-*DayByDay*
+**DayByDay**  
 Last updated: March 9, 2026
 
 ## Overview

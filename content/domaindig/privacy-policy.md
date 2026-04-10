@@ -6,7 +6,7 @@ section_label = "Project / DomainDig"
 meta = "Policy / Privacy / Current"
 +++
 
-*DomainDig*  
+**DomainDig**  
 Last updated: March 11, 2026
 
 ## Overview
