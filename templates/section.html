@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% set path = current_path | default(value="/") %}
+  <section class="page-section section-compact">
+    <div class="container section-intro section-intro-grid">
+      <div>
+        <p class="section-label">Notebook / {{ section.title }}</p>
+        <h1>{{ section.title }}</h1>
+        {% if path is starting_with("/projects") %}
+          <p class="section-linkline"><a href="https://github.com/zerolabsco">github.com/zerolabsco</a></p>
+        {% endif %}
+      </div>
+      <p class="section-meta">
+        {% if path is starting_with("/projects") %}
+          Modules / Tools / Experiments
+        {% elif path is starting_with("/services") %}
+          Public / Best-effort / Shared
+        {% else %}
+          Notes / Releases / Log
+        {% endif %}
+      </p>
+    </div>
+  </section>
+
+  {% if path is starting_with("/projects") %}
+    <section class="page-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Project Index</p>
+          <div class="section-title-row">
+            <h2>Module Records</h2>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-module project-primary" id="hutch">
+            <div class="module-topline">
+              <span class="module-tag">Source Control Client</span>
+              <span class="module-status">Active</span>
+            </div>
+            <h3>Hutch</h3>
+            <p class="module-copy">An iOS client for SourceHut.</p>
+            <div class="module-footer">
+              <a href="/hutch/">Open →</a>
+              <span>Platform / iOS</span>
+            </div>
+          </article>
+
+          <article class="project-module" id="domaindig">
+            <div class="module-topline">
+              <span class="module-tag">Network Inspection</span>
+              <span class="module-status">Experimental</span>
+            </div>
+            <h3>DomainDig</h3>
+            <p class="module-copy">DNS lookup and SSL certificate checker.</p>
+            <div class="module-footer">
+              <a href="/domaindig/">Open →</a>
+              <span>Type / Network tooling</span>
+            </div>
+          </article>
+
+          <article class="project-module" id="daybyday">
+            <div class="module-topline">
+              <span class="module-tag">Personal Systems</span>
+              <span class="module-status">Experimental</span>
+            </div>
+            <h3>DayByDay</h3>
+            <p class="module-copy">Learn days, months and seasons.</p>
+            <div class="module-footer">
+              <a href="/daybyday/">Open →</a>
+              <span>Type / Progress tracking</span>
+            </div>
+          </article>
+
+          <article class="project-module" id="rune">
+            <div class="module-topline">
+              <span class="module-tag">Domain Operations</span>
+              <span class="module-status">Active</span>
+            </div>
+            <h3>Rune</h3>
+            <p class="module-copy">A domain and DNS control surface built for direct, low-friction system work.</p>
+            <div class="module-footer">
+              <a href="/rune/">Open →</a>
+              <span>Type / Domain tooling</span>
+            </div>
+          </article>
+
+          <article class="project-module" id="solar">
+            <div class="module-topline">
+              <span class="module-tag">Infrastructure Client</span>
+              <span class="module-status">Upcoming</span>
+            </div>
+            <h3>Solar</h3>
+            <p class="module-copy">An upcoming iOS client for Cloudflare.</p>
+            <div class="module-footer">
+              <a href="/solar/">Open →</a>
+              <span>Platform / iOS</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  {% elif path is starting_with("/services") %}
+    <section class="page-section">
+      <div class="container">
+        {% set service_parts = section.content | safe | split(pat="<ul>") %}
+        <div class="page-copy section-body">
+          {{ service_parts | first | safe }}
+        </div>
+        {% if service_parts | length > 1 %}
+          {% set service_rest = service_parts | slice(start=1) | join(sep="<ul>") %}
+          <div class="page-copy section-body service-table">
+            <ul>{{ service_rest | safe }}
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if section.pages %}
+    <section class="page-section">
+      <div class="container">
+        <div class="entry-index">
+          {% for page in section.pages %}
+            <article class="entry-row">
+              <div>
+                <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+                {% if page.description %}
+                  <p class="entry-copy">{{ page.description }}</p>
+                {% endif %}
+              </div>
+              {% if page.date %}
+                <p class="entry-meta">{{ page.date | date(format="%Y-%m-%d") }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

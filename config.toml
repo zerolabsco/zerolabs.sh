@@ -1,0 +1,14 @@
+base_url = "https://zerolabs.sh"
+title = "Zero Labs"
+description = "Small, durable software."
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+minify_html = true
+taxonomies = []
+
+[markdown]
+render_emoji = false
+smart_punctuation = false
+
+[extra]

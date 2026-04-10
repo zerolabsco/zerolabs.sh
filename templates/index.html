@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="hero">
+    <div class="container hero-shell">
+      <div class="hero-main">
+        <p class="section-label">System / Zero Labs</p>
+        <h1>{{ section.title }}</h1>
+        <p class="hero-statement">Experimental software, infrastructure tools, and public systems built to hold under real use.</p>
+        <p class="hero-link"><a href="https://github.com/zerolabsco">github.com/zerolabsco</a></p>
+      </div>
+
+      <dl class="hero-manifest" aria-label="Lab summary">
+        <div class="manifest-row">
+          <dt>Software</dt>
+          <dd>Narrow, durable tools.</dd>
+        </div>
+        <div class="manifest-row">
+          <dt>Infrastructure</dt>
+          <dd>Systems intended to hold under use.</dd>
+        </div>
+        <div class="manifest-row">
+          <dt>Experiments</dt>
+          <dd>Interfaces under active pressure.</dd>
+        </div>
+        <div class="manifest-row">
+          <dt>Public Access</dt>
+          <dd>Best-effort shared endpoints.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Project Index</p>
+        <div class="section-title-row">
+          <h2>Current Systems</h2>
+          <a class="section-link" href="/projects/">All projects →</a>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-module project-primary">
+          <div class="module-topline">
+            <span class="module-tag">Source Control Client</span>
+            <span class="module-status">Active</span>
+          </div>
+          <h3>Hutch</h3>
+          <p class="module-copy">An iOS client for SourceHut.</p>
+          <div class="module-footer">
+            <a href="/hutch/">Open →</a>
+            <span>Platform / iOS</span>
+          </div>
+        </article>
+
+        <article class="project-module">
+          <div class="module-topline">
+            <span class="module-tag">Network Inspection</span>
+            <span class="module-status">Experimental</span>
+          </div>
+          <h3>DomainDig</h3>
+          <p class="module-copy">DNS lookup and SSL certificate checker.</p>
+          <div class="module-footer">
+            <a href="/domaindig/">Open →</a>
+            <span>Type / Network tooling</span>
+          </div>
+        </article>
+
+        <article class="project-module">
+          <div class="module-topline">
+            <span class="module-tag">Personal Systems</span>
+            <span class="module-status">Experimental</span>
+          </div>
+          <h3>DayByDay</h3>
+          <p class="module-copy">Learn days, months and seasons.</p>
+          <div class="module-footer">
+            <a href="/daybyday/">Open →</a>
+            <span>Type / Progress tracking</span>
+          </div>
+        </article>
+
+        <article class="project-module">
+          <div class="module-topline">
+            <span class="module-tag">Domain Operations</span>
+            <span class="module-status">Active</span>
+          </div>
+          <h3>Rune</h3>
+          <p class="module-copy">A domain and DNS control surface built for direct, low-friction system work.</p>
+          <div class="module-footer">
+            <a href="/rune/">Open →</a>
+            <span>Type / Domain tooling</span>
+          </div>
+        </article>
+
+        <article class="project-module">
+          <div class="module-topline">
+            <span class="module-tag">Infrastructure Client</span>
+            <span class="module-status">Upcoming</span>
+          </div>
+          <h3>Solar</h3>
+          <p class="module-copy">An upcoming iOS client for Cloudflare.</p>
+          <div class="module-footer">
+            <a href="/solar/">Open →</a>
+            <span>Platform / iOS</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Public Systems</p>
+        <div class="section-title-row">
+          <h2>Selected Endpoints</h2>
+          <a class="section-link" href="/services/">View all services →</a>
+        </div>
+      </div>
+
+      <div class="service-table">
+        <div class="service-row">
+          <span class="service-name"><a href="https://search.zerolabs.sh">SearXNG</a></span>
+          <span class="service-copy">A privacy-respecting open metasearch engine.</span>
+          <span class="service-state">Search / Public</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name"><a href="https://pipedapi.zerolabs.sh">Piped</a></span>
+          <span class="service-copy">YouTube alternative front-end.</span>
+          <span class="service-state">Video / Public</span>
+        </div>
+        <div class="service-row">
+          <span class="service-name"><a href="https://paste.zerolabs.sh">FlashPaper</a></span>
+          <span class="service-copy">One-time encrypted password and secret sharing.</span>
+          <span class="service-state">Sharing / Public</span>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

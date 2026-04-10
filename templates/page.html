@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article class="page-section">
+    <div class="container article-shell">
+      <div class="article-head section-intro-grid">
+        <div>
+          <p class="section-label">{{ page.extra.section_label | default(value="Notebook / Page") }}</p>
+          <h1>{{ page.title }}</h1>
+          {% if page.description %}
+            <p class="hero-statement">{{ page.description }}</p>
+          {% elif page.date %}
+            <p class="entry-meta">{{ page.date | date(format="%Y-%m-%d") }}</p>
+          {% endif %}
+        </div>
+        <p class="section-meta">{{ page.extra.meta | default(value="Record / Detail") }}</p>
+      </div>
+
+      <div class="article-body">
+        <div class="page-copy">
+          {{ page.content | safe }}
+        </div>
+      </div>
+    </div>
+  </article>
+{% endblock %}
