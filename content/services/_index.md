@@ -18,8 +18,6 @@ These are maintained on a best-effort basis. Logging and retention are kept mini
 - **[LibremDB](https://ld.zerolabs.sh)** IMDb alternative front-end  
 - **[Binternet](https://pin.zerolabs.sh)** Pinterest alternative front-end  
 - **[Piped](https://pipedapi.zerolabs.sh)** YouTube alternative front-end  
-- **[Rural Dictionary](https://rd.zerolabs.sh)** Urban Dictionary alternative front-end  
-- **[Rimgo](https://rimgo.zerolabs.sh)** Imgur alternative front-end  
 - **[Small](https://small.zerolabs.sh)** Medium alternative front-end  
 
 ## Other Services I Didn't Build
